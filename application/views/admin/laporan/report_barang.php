@@ -43,17 +43,11 @@
 					<td style="text-align: center;"><?= $brg->kode_barang ?></td>
 					<td style="text-align: center;"><?= $brg->nama_kategori ?></td>
 					<td><?= $brg->nama_barang ?></td>
-					<td style="text-align: right;">Rp <?= number_format($brg->harga_jual, 0, ',', '.') ?></td>
+					<td style="text-align: right;"><?= number_format($brg->harga_jual, 0, ',', '.') ?></td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>
 		<tfoot>
-			<!-- <tr style="text-align: center;">
-				<td colspan="3" align="right"><strong>Total : </strong></td>
-				<?php foreach ($sum_terjual as $sum) : ?>
-					<td><?= $sum->total_terjual ?></td>
-				<?php endforeach; ?>
-			</tr> -->
 		</tfoot>
 	</table>
 	<h5 style="font-weight: normal;">Dicetak pada tanggal : <?= date('d M Y') ?>, Pukul : <?= date('H:i:s') ?></h5>

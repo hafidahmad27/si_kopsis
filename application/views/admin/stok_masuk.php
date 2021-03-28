@@ -27,16 +27,16 @@
 					<a href="<?= base_url() ?>/Stok_Masuk/print_pdf" class="btn btn-success float-right" target="blank"><i class="fa fa-file-pdf"></i> Cetak</a>
 					<div class="card mt-1">
 						<div class="card-body">
-							<table id="example1" class="table table-bordered table-striped">
+							<table id="example1" class="table table-bordered table-hover">
 								<thead>
 									<tr style="text-align: center;">
 										<th style="width: 6%;">No</th>
 										<th style="width: 11%;">Tgl&nbsp;Masuk</th>
 										<th style="width: 7%;">Jam</th>
-										<th style="width: 16%;">Nama Barang</th>
+										<th style="width: 18%;">Nama Barang</th>
 										<th style="width: 7%;">Jml</th>
 										<th style="width: 11%;">Harga Beli</th>
-										<th style="width: 14%;">Total Harga Beli</th>
+										<th style="width: 14%;">Subtotal Harga Beli</th>
 										<th style="width: 14%;">Nama Supplier</th>
 										<th style="width: 1%;">Aksi</th>
 									</tr>
@@ -50,9 +50,9 @@
 											<td><?= $brgMasuk->tanggal_stok_masuk ?></td>
 											<td><?= $brgMasuk->jam_stok_masuk ?></td>
 											<td><?= $brgMasuk->nama_barang ?></td>
-											<td style="text-align: right;"><?= $brgMasuk->jumlah_stok_masuk ?></td>
-											<td style="text-align: right;">Rp <?= number_format($brgMasuk->harga_beli, 0, ',', '.') ?></td>
-											<td style="text-align: right;">Rp <?= number_format($brgMasuk->total_harga_beli, 0, ',', '.') ?></td>
+											<td style="text-align: center;"><?= $brgMasuk->jumlah_stok_masuk ?></td>
+											<td style="text-align: right;"><?= number_format($brgMasuk->harga_beli, 0, ',', '.') ?></td>
+											<td style="text-align: right;"><?= number_format($brgMasuk->total_harga_beli, 0, ',', '.') ?></td>
 											<td style="text-align: center;"><?= $brgMasuk->nama_supplier ?></td>
 											<td style="text-align: center;">
 												<!-- <a href="<?= base_url() ?>/Stok_Masuk/edit/<?= $brgMasuk->id_stok_masuk; ?>" class="btn btn-success btn-sm btnEditsin" data-toggle="modal" data-target="#formModal" data-id="<?= $brgMasuk->id_stok_masuk; ?>"><i class="fa fa-edit"></i></a> -->
@@ -114,7 +114,7 @@
 							<input type="number" id="harga_beli" name="harga_beli" class="form-control" min="0">
 						</div>
 						<div class="form-group">
-							<label>Total Harga Beli</label>
+							<label>Subtotal Harga Beli</label>
 							<input type="number" id="total_harga_beli" name="total_harga_beli" class=" form-control" min="0" readonly>
 						</div>
 						<div class="form-group">

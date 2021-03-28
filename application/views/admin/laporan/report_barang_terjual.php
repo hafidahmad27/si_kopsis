@@ -21,7 +21,7 @@
 	<hr>
 
 	<center>
-		<h3 style="font-size: 12pt; line-height: 20px;">LAPORAN BARANG TERJUAL</h3>
+		<h3 style="font-size: 12pt; line-height: 20px;">LAPORAN STOK TERJUAL</h3>
 	</center>
 
 	<table border="1" cellspacing="0" cellpadding="5" width="100%">
@@ -30,8 +30,9 @@
 				<th>No.</th>
 				<th>Tanggal</th>
 				<th>Nama Barang</th>
+				<!-- <th>Harga Jual</th> -->
 				<th>Jumlah Terjual</th>
-				<th>Sub Total</th>
+				<!-- <th>Sub Total</th> -->
 			</tr>
 		</thead>
 		<tbody>
@@ -41,17 +42,18 @@
 					<td><?= $no++ ?></td>
 					<td style="text-align: center;"><?= $terjual->tanggal_penjualan ?></td>
 					<td><?= $terjual->nama_barang ?></td>
+					<!-- <td style="text-align: right;"><?= number_format($terjual->harga_jual, 0, ',', '.') ?> </td> -->
 					<td style="text-align: center;"><?= $terjual->jumlah_barang_terjual ?> </td>
-					<td style="text-align: right;"><?= number_format($terjual->sub_total, 0, ',', '.') ?> </td>
+					<!-- <td style="text-align: right;"><?= number_format($terjual->sub_total, 0, ',', '.') ?> </td> -->
 				</tr>
 			<?php endforeach; ?>
 		</tbody>
 		<tfoot>
 			<tr>
-				<td colspan="3" align="right"><strong>Total : </strong></td>
+				<td colspan="3" align="right"><strong>Total Terjual : </strong></td>
 				<?php foreach ($sum_terjual as $sum) : ?>
 					<td style="text-align: center;"><strong><?= $sum->sum_jumlah_barang ?></strong></td>
-					<td style="text-align: right;"><strong><?= number_format($sum->total, 0, ',', '.') ?></strong></td>
+					<!-- <td style="text-align: right;"><strong><?= number_format($sum->total, 0, ',', '.') ?></strong></td> -->
 				<?php endforeach; ?>
 			</tr>
 		</tfoot>

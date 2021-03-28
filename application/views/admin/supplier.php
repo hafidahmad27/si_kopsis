@@ -27,7 +27,7 @@
 					<a href="<?= base_url() ?>/Supplier/print_pdf" class="btn btn-success float-right" target="blank"><i class="fa fa-file-pdf"></i> Cetak</a>
 					<div class="card mt-1">
 						<div class="card-body">
-							<table id="example1" class="table table-bordered table-striped">
+							<table id="example1" class="table table-bordered table-hover">
 								<thead>
 									<tr>
 										<th>No.</th>
@@ -35,7 +35,7 @@
 										<th style="width: 30%;">Alamat Supplier</th>
 										<th>Telepon</th>
 										<th>Keterangan</th>
-										<th style="width: 9.1%;">Aksi</th>
+										<th style="width: 9.1%; text-align: center;">Aksi</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -48,7 +48,7 @@
 											<td><?= $suplier->alamat_supplier ?></td>
 											<td><?= $suplier->telepon ?></td>
 											<td><?= $suplier->keterangan ?></td>
-											<td>
+											<td style="text-align: center;">
 												<a href="<?= base_url() ?>/Supplier/edit/<?= $suplier->id_supplier; ?>" class="btn btn-success btn-sm btnEdits" data-toggle="modal" data-target="#formModal" data-id="<?= $suplier->id_supplier; ?>"><i class="fa fa-edit"></i></a>
 												<a onclick="return confirm('Apakah anda yakin untuk menghapus?')" href="<?= base_url() ?>/Supplier/hapus/<?= $suplier->id_supplier; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 											</td>

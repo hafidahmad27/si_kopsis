@@ -27,7 +27,7 @@
 					<a href="<?= base_url() ?>/Barang/print_pdf" class="btn btn-success float-right" target="blank"><i class="fa fa-file-pdf"></i> Cetak</a>
 					<div class="card mt-1">
 						<div class="card-body">
-							<table id="example1" class="table table-bordered table-striped">
+							<table id="example1" class="table table-bordered table-hover">
 								<thead>
 									<tr style="text-align: center;">
 										<th style="width: 5%;">No.</th>
@@ -48,7 +48,7 @@
 											<td><?= $brg->kode_barang ?></td>
 											<td style="text-align: center;"><?= $brg->nama_kategori ?></td>
 											<td><?= $brg->nama_barang ?></td>
-											<td style="text-align: right;">Rp <?= number_format($brg->harga_jual, 0, ',', '.') ?></td>
+											<td style="text-align: right;"><?= number_format($brg->harga_jual, 0, ',', '.') ?></td>
 											<td style="text-align: right;"><?= $brg->stok_barang ?></td>
 											<td style="text-align: center;">
 												<a href="<?= base_url() ?>/Barang/edit/<?= $brg->kode_barang; ?>" class="btn btn-success btn-sm btnEditb" data-toggle="modal" data-target="#formModal" data-id="<?= $brg->kode_barang; ?>"><i class="fa fa-edit"></i></a>

@@ -26,12 +26,12 @@
 					<a onclick="return confirm('Apakah anda yakin untuk menghapus semua data?')" href="<?= base_url() ?>/Kategori_Barang/hapus_semua" class="btn btn-danger float-right"><i class="fas fa-trash-alt"></i> Hapus Semua</a>
 					<div class="card mt-1">
 						<div class="card-body">
-							<table id="example1" class="table table-bordered table-striped">
+							<table id="example1" class="table table-bordered table-hover">
 								<thead>
 									<tr>
 										<th>No.</th>
 										<th>Nama Kategori</th>
-										<th style="width: 15%;">Aksi</th>
+										<th style="width: 15%; text-align: center;">Aksi</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -41,7 +41,7 @@
 										<tr>
 											<td><?= $no++ ?></td>
 											<td><?= $ktg->nama_kategori ?></td>
-											<td>
+											<td style="text-align: center;">
 												<a href="<?= base_url() ?>/Kategori_Barang/edit/<?= $ktg->id_kategori; ?>" class="btn btn-success btn-sm btnEdit" data-toggle="modal" data-target="#formModal" data-id="<?= $ktg->id_kategori; ?>"><i class="fa fa-edit"></i></a>
 												<a onclick="return confirm('Apakah anda yakin untuk menghapus?')" href="<?= base_url() ?>/Kategori_Barang/hapus/<?= $ktg->id_kategori; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
 											</td>

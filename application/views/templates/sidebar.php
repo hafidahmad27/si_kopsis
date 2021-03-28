@@ -93,39 +93,22 @@
 						</li>
 						<li class="nav-item">
 							<a href="<?= site_url(); ?>stok_terjual" class="nav-link <?php echo $uri == 'stok_terjual' ? 'active' : 'no' ?>">&nbsp; &nbsp;
-								<i class="fas fa-money-check-alt nav-icon"></i>
+								<i class="fas fa-check-square nav-icon"></i>
 								<p>Stok Terjual</p>
 							</a>
 						</li>
-
 					</ul>
 				</li>
-				<!-- <li class="nav-item">
-					<a href="<?= site_url(); ?>transaksi" class="nav-link <?php echo $uri == 'transaksi' ? 'active' : 'no' ?>">
-						<i class="nav-icon fas fa-money-bill-alt"></i>
-						<p>
-							Transaksi (Maintenance).
-						</p>
-					</a>
-				</li> -->
 				<li class="nav-item">
 					<a href="<?= site_url(); ?>penjualan" class="nav-link <?php echo $uri == 'penjualan' ? 'active' : 'no' ?>">
-						<i class="nav-icon fas fa-money-bill-alt"></i>
+						<i class="fas fa-hand-holding-usd nav-icon"></i>
 						<p>
 							Transaksi Penjualan
 						</p>
 					</a>
 				</li>
-				<li class="nav-item">
-					<a href="<?= site_url(); ?>laporan_penjualan" class="nav-link <?php echo $uri == 'laporan_penjualan' ? 'active' : 'no' ?>">
-						<i class="nav-icon fas fa-book"></i>
-						<p>
-							Laporan Penjualan
-						</p>
-					</a>
-				</li>
-				<!-- <li class="nav-item <?php echo $uri == 'laporan_penjualan' || $uri == 'laporan_barang_terjual' ? 'menu-open' : 'no' ?>">
-					<a href="#" class="nav-link <?php echo $uri == 'laporan_penjualan' || $uri == 'laporan_barang_terjual' ? 'active' : 'no' ?>">
+				<li class="nav-item <?php echo $uri == 'laporan_penjualan' || $uri == 'laporan_keuntungan' ? 'menu-open' : 'no' ?>">
+					<a href="#" class="nav-link <?php echo $uri == 'laporan_penjualan' || $uri == 'laporan_keuntungan' ? 'active' : 'no' ?>">
 						<i class="nav-icon fas fa-book"></i>
 						<p>
 							Laporan
@@ -136,27 +119,22 @@
 						<li class="nav-item">
 							<a href="<?= site_url(); ?>laporan_penjualan" class="nav-link <?php echo $uri == 'laporan_penjualan' ? 'active' : 'no' ?>">&nbsp; &nbsp;
 								<i class="fas fa-file-invoice-dollar nav-icon"></i>
-								<p>Laporan Penjualan</p>
-							</a>
-						</li> -->
-				<!-- <li class="nav-item">
-							<a href="<?= site_url(); ?>laporan_barang_terjual" class="nav-link <?php echo $uri == 'laporan_barang_terjual' ? 'active' : 'no' ?>">&nbsp; &nbsp;
-								<i class="fas fa-file-invoice-dollar nav-icon"></i>
-								<p>Laporan Barang Terjual</p>
-							</a>
-						</li> -->
-				<!-- <li class="nav-item">
-							<a href="<?= site_url(); ?>laporan_stok_masuk" class="nav-link <?php echo $uri == 'laporan_stok_masuk' ? 'active' : 'no' ?>">&nbsp; &nbsp;
-								<i class="fas fa-file-upload nav-icon"></i>
-								<p>Laporan Stok Masuk</p>
+								<p>
+									Laporan Penjualan
+								</p>
 							</a>
 						</li>
 						<li class="nav-item">
-							<a href="<?= site_url(); ?>laporan_stok_keluar" class="nav-link <?php echo $uri == 'laporan_stok_keluar' ? 'active' : 'no' ?>">&nbsp; &nbsp;
-								<i class="fas fa-file-download nav-icon"></i>
-								<p>Laporan Stok Keluar</p>
+							<a href="<?= site_url(); ?>laporan_keuntungan" class="nav-link <?php echo $uri == 'laporan_keuntungan' ? 'active' : 'no' ?>">&nbsp; &nbsp;
+								<i class="fas fa-dollar-sign nav-icon"></i>
+								<p>
+									Laporan Keuntungan
+								</p>
 							</a>
-						</li> -->
+						</li>
+					</ul>
+				</li>
+
 				<li class="nav-item">
 					<!-- <a href="pages/tables/jsgrid.html" class="nav-link">
 								<i class="far fa-tachometer nav-icon"></i>

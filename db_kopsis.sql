@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.2
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 11, 2021 at 06:29 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.10
+-- Generation Time: Mar 28, 2021 at 10:19 AM
+-- Server version: 10.4.17-MariaDB
+-- PHP Version: 7.4.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,13 +41,13 @@ CREATE TABLE `tb_barang` (
 --
 
 INSERT INTO `tb_barang` (`id_barang`, `id_kategori`, `kode_barang`, `nama_barang`, `harga_jual`, `stok_barang`) VALUES
-(1, 1, 'BRG0001', 'HVS', 500, 97),
+(1, 1, 'BRG0001', 'HVS', 500, 92),
 (2, 1, 'BRG0002', 'Bufallo', 500, 0),
 (3, 1, 'BRG0003', 'Folio Bergaris', 500, 0),
-(4, 1, 'BRG0004', 'Mika', 500, 93),
+(4, 1, 'BRG0004', 'Mika', 500, 88),
 (5, 2, 'BRG0005', 'Amplop sedang', 500, 490),
 (6, 1, 'BRG0006', 'Amplop besar', 500, 0),
-(7, 3, 'BRG0007', 'CD-R', 3500, 97),
+(7, 3, 'BRG0007', 'CD-R', 3500, 94),
 (8, 3, 'BRG0008', 'DVD-RW', 5500, 0),
 (9, 3, 'BRG0009', 'CD-RW', 5000, 0);
 
@@ -75,7 +75,14 @@ INSERT INTO `tb_detail_penjualan` (`no_penjualan`, `nama_barang`, `harga_jual`, 
 ('TR1612330764', 'HVS', '500', 1, '500'),
 ('TR1612411761', 'Mika', '500', 5, '2500'),
 ('TR1612424196', 'Amplop sedang', '500', 10, '5000'),
-('TR1612424196', 'Mika', '500', 2, '1000');
+('TR1612424196', 'Mika', '500', 2, '1000'),
+('TR1616671241', 'CD-R', '3500', 3, '10500'),
+('TR1616671241', 'Mika', '500', 1, '500'),
+('TR1616732644', 'HVS', '500', 1, '500'),
+('TR1616839959', 'HVS', '500', 1, '500'),
+('TR1616918532', 'Mika', '500', 1, '500'),
+('TR1616918552', 'Mika', '500', 3, '1500'),
+('TR1616918552', 'HVS', '500', 3, '1500');
 
 -- --------------------------------------------------------
 
@@ -129,7 +136,12 @@ INSERT INTO `tb_penjualan` (`id`, `no_penjualan`, `nama_kasir`, `tanggal_penjual
 (1, 'TR1612315192', 'admin', '03/02/2021', '08:19:52', 1000),
 (2, 'TR1612330764', 'admin', '03/02/2021', '12:39:24', 11000),
 (3, 'TR1612411761', 'admin', '04/02/2021', '11:09:21', 2500),
-(4, 'TR1612424196', 'admin', '04/02/2021', '14:36:36', 6000);
+(4, 'TR1612424196', 'admin', '04/02/2021', '14:36:36', 6000),
+(5, 'TR1616671241', 'admin', '25/03/2021', '18:20:41', 11000),
+(6, 'TR1616732644', 'admin', '26/03/2021', '11:24:04', 500),
+(7, 'TR1616839959', 'admin', '27/03/2021', '17:12:39', 500),
+(8, 'TR1616918532', 'admin', '28/03/2021', '15:02:12', 500),
+(9, 'TR1616918552', 'admin', '28/03/2021', '15:02:32', 3000);
 
 -- --------------------------------------------------------
 
@@ -260,7 +272,7 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `password`) VALUES
 (1, 'Admin', 'admin', 'admin'),
-(2, 'bu rona', 'rona', '12345');
+(2, 'Rona Aniwidjaja', 'ronawidjaja', '1234567');
 
 --
 -- Indexes for dumped tables
@@ -334,7 +346,7 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_penjualan`
 --
 ALTER TABLE `tb_penjualan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `tb_stok_keluar`

@@ -33,7 +33,7 @@
 				<th style="width: 16%;">Nama Barang</th>
 				<th style="width: 7%;">Jml</th>
 				<th style="width: 11%;">Harga Beli</th>
-				<th style="width: 14%;">Total Harga Beli</th>
+				<th style="width: 14%;">Subtotal Harga Beli</th>
 				<th style="width: 14%;">Nama Supplier</th>
 			</tr>
 		</thead>
@@ -46,10 +46,10 @@
 					<td><?= $brgMasuk->tanggal_stok_masuk ?></td>
 					<td><?= $brgMasuk->jam_stok_masuk ?></td>
 					<td><?= $brgMasuk->nama_barang ?></td>
-					<td><?= $brgMasuk->jumlah_stok_masuk ?></td>
-					<td>Rp <?= number_format($brgMasuk->harga_beli, 0, ',', '.') ?></td>
-					<td>Rp <?= number_format($brgMasuk->total_harga_beli, 0, ',', '.') ?></td>
-					<td><?= $brgMasuk->nama_supplier ?></td>
+					<td style="text-align: center;"><?= $brgMasuk->jumlah_stok_masuk ?></td>
+					<td style="text-align: right;"><?= number_format($brgMasuk->harga_beli, 0, ',', '.') ?></td>
+					<td style="text-align: right;"><?= number_format($brgMasuk->total_harga_beli, 0, ',', '.') ?></td>
+					<td style="text-align: center;"><?= $brgMasuk->nama_supplier ?></td>
 				</tr>
 			<?php endforeach; ?>
 		</tbody>

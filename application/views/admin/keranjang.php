@@ -1,13 +1,13 @@
 <tr class="row-keranjang">
-	<td class="nama_barang">
+	<td class="nama_barang" style="text-align: center;">
 		<?= $this->input->post('nama_barang') ?>
 		<input type="hidden" name="nama_barang_hidden[]" value="<?= $this->input->post('nama_barang') ?>">
 	</td>
-	<td class="harga_jual">
+	<td class="harga_jual" style="text-align: right;">
 		<?= $this->input->post('harga_jual') ?>
 		<input type="hidden" name="harga_jual_hidden[]" value="<?= $this->input->post('harga_jual') ?>">
 	</td>
-	<td class="jumlah">
+	<td class="jumlah" style="text-align: center;">
 		<?= $this->input->post('jumlah') ?>
 		<input type="hidden" name="jumlah_hidden[]" value="<?= $this->input->post('jumlah') ?>">
 	</td>
@@ -15,7 +15,7 @@
 		<?= strtoupper($this->input->post('satuan')) ?>
 		<input type="hidden" name="satuan_hidden[]" value="<?= $this->input->post('satuan') ?>">
 	</td> -->
-	<td class="sub_total">
+	<td class="sub_total" style="text-align: right;">
 		<?= $this->input->post('sub_total') ?>
 		<input type="hidden" name="sub_total_hidden[]" value="<?= $this->input->post('sub_total') ?>">
 	</td>

@@ -41,7 +41,7 @@
 											<td><?= $penjualan->no_penjualan ?></td>
 											<td><?= $penjualan->nama_kasir ?></td>
 											<td><?= $penjualan->tanggal_penjualan ?> Pukul <?= $penjualan->jam_penjualan ?></td>
-											<td style="text-align: right;">Rp <?= number_format($penjualan->total, 0, ',', '.') ?></td>
+											<td style="text-align: right;"><?= number_format($penjualan->total, 0, ',', '.') ?></td>
 											<td style="text-align: center;">
 												<a href="<?= base_url('laporan_penjualan/detail/' . $penjualan->no_penjualan) ?>" class="btn btn-success btn-sm"><i class="fa fa-eye"></i></a>
 												<a onclick="return confirm('apakah anda yakin untuk menghapus?')" href="<?= base_url('laporan_penjualan/hapus/' . $penjualan->no_penjualan) ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>

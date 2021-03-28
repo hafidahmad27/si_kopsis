@@ -27,17 +27,17 @@
 					<a href="<?= base_url() ?>/Stok_Keluar/print_pdf" class="btn btn-success float-right" target="blank"><i class="fa fa-file-pdf"></i> Cetak</a>
 					<div class="card mt-1">
 						<div class="card-body">
-							<table id="example1" class="table table-bordered table-striped">
+							<table id="example1" class="table table-bordered table-hover">
 								<thead>
 									<tr>
-										<th style="width: 5%;">No</th>
-										<th style="width: 15%;">Tgl Keluar</th>
-										<th style="width: 12%;">Jam</th>
-										<th>Nama Barang</th>
-										<th>Jumlah</th>
-										<th>Nama Supplier</th>
-										<th>Keterangan</th>
-										<th>Aksi</th>
+										<th style="width: 6%;">No</th>
+										<th style="width: 11%;">Tgl Keluar</th>
+										<th style="width: 7%;">Jam</th>
+										<th style="width: 20%; text-align: center;">Nama Barang</th>
+										<th style="width: 7%;">Jml</th>
+										<th style="width: 18%; text-align: center;">Nama Supplier</th>
+										<th style="text-align: center;">Keterangan</th>
+										<th style="width: 5%;">Aksi</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -49,7 +49,7 @@
 											<td><?= $brgKeluar->tanggal_stok_keluar ?></td>
 											<td><?= $brgKeluar->jam_stok_keluar ?></td>
 											<td><?= $brgKeluar->nama_barang ?></td>
-											<td style="text-align: right;"><?= $brgKeluar->jumlah_stok_keluar ?></td>
+											<td style="text-align: center;"><?= $brgKeluar->jumlah_stok_keluar ?></td>
 											<td style="text-align: center;"><?= $brgKeluar->nama_supplier ?></td>
 											<td><?= $brgKeluar->keterangan ?></td>
 											<td>

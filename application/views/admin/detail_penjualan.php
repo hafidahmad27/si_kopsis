@@ -56,29 +56,29 @@
 								<div class="col-md-12">
 									<table class="table table-bordered">
 										<thead>
-											<tr>
-												<td><strong>No</strong></td>
-												<td><strong>Nama Barang</strong></td>
-												<td><strong>Harga Jual</strong></td>
-												<td><strong>Jumlah</strong></td>
-												<td><strong>Sub Total</strong></td>
+											<tr style="text-align: center;">
+												<td style="width: 5%;"><strong>No</strong></td>
+												<td style="width: 25%;"><strong>Nama Barang</strong></td>
+												<td style="width: 11%;"><strong>Harga Jual</strong></td>
+												<td style="width: 7%;"><strong>Jumlah</strong></td>
+												<td style="width: 11%;"><strong>Sub Total</strong></td>
 											</tr>
 										</thead>
 										<tbody>
 											<?php foreach ($all_detail_penjualan as $detail_penjualan) : ?>
 												<tr>
-													<td><?= $no++ ?></td>
+													<td style="text-align: center;"><?= $no++ ?></td>
 													<td><?= $detail_penjualan->nama_barang ?></td>
-													<td>Rp <?= number_format($detail_penjualan->harga_jual, 0, ',', '.') ?></td>
-													<td><?= $detail_penjualan->jumlah_barang ?> </td>
-													<td>Rp <?= number_format($detail_penjualan->sub_total, 0, ',', '.') ?></td>
+													<td style="text-align: right;"><?= number_format($detail_penjualan->harga_jual, 0, ',', '.') ?></td>
+													<td style="text-align: center;"><?= $detail_penjualan->jumlah_barang ?> </td>
+													<td style="text-align: right;"><?= number_format($detail_penjualan->sub_total, 0, ',', '.') ?></td>
 												</tr>
 											<?php endforeach ?>
 										</tbody>
 										<tfoot>
-											<tr>
+											<tr style="text-align: right;">
 												<td colspan="4" align="right"><strong>Total : </strong></td>
-												<td>Rp <?= number_format($penjualan->total, 0, ',', '.') ?></td>
+												<td><strong> <?= number_format($penjualan->total, 0, ',', '.') ?></strong></td>
 											</tr>
 										</tfoot>
 									</table>

@@ -84,12 +84,12 @@
 											<table class="table table-bordered" id="keranjang">
 												<thead>
 													<tr>
-														<th width="35%">Nama Barang</th>
-														<th width="15%">Harga Jual</th>
-														<th width="15%">Jumlah</th>
+														<th width="35%" style="text-align: center;">Nama Barang</th>
+														<th width="11%">Harga Jual</th>
+														<th width="3%">Jumlah</th>
 														<!-- <th width="10%">Satuan</th> -->
-														<th width="10%">Sub Total</th>
-														<th width="15%">Aksi</th>
+														<th width="11%">Sub Total</th>
+														<th width="25%">Aksi</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -98,7 +98,7 @@
 												<tfoot>
 													<tr>
 														<td colspan="3" align="right"><strong>Total : </strong></td>
-														<td id="total"></td>
+														<td id="total" style="text-align: right;"></td>
 
 														<td>
 															<input type="hidden" name="total_hidden" value="">
