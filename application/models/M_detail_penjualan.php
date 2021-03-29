@@ -67,15 +67,16 @@ class M_detail_penjualan extends CI_Model
 		return $query->result();
 	}
 
-	public function filters($tanggal_penjualan)
-	{
-		$this->db->select('tanggal_penjualan, nama_barang, SUM(jumlah_barang) as jumlah_barang_terjual');
-		$this->db->from('tb_penjualan');
-		$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
-		$this->db->where('tanggal_penjualan', $tanggal_penjualan);
-		$this->db->group_by('nama_barang');
+	// public function filters($tanggal_awal, $tanggal_akhir)
+	// {
+	// 	$this->db->select('tanggal_penjualan, nama_barang, SUM(jumlah_barang) as jumlah_barang_terjual');
+	// 	$this->db->from('tb_penjualan');
+	// 	$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
+	// 	$this->db->where('tanggal_penjualan = ' . $tanggal_awal);
+	// 	$this->db->where('tanggal_penjualan = ' . $tanggal_akhir);
+	// 	$this->db->group_by('nama_barang');
 
-		$query = $this->db->get();
-		return $query->result();
-	}
+	// 	$query = $this->db->get();
+	// 	return $query->result();
+	// }
 }

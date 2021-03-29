@@ -117,6 +117,7 @@ class Stok_Masuk extends CI_Controller
 		$data['supplier'] = $this->M_master->tampil_data('tb_supplier')->result();
 		$data['barang'] = $this->M_master->tampil_data('tb_barang')->result();
 		$data['stok_masuk'] = $this->M_master->getStokMasuk();
+		$data['sum_total_harga_beli'] = $this->M_master->sum_total_harga_beli();
 		$html = $this->load->view('admin/laporan/report_stok_masuk', $data, true);
 
 		$dompdf->load_html($html);

@@ -34,6 +34,9 @@ class Stok_Terjual extends CI_Controller
 		$dompdf = new Dompdf($options);
 		$dompdf->setPaper('A4', 'Potrait');
 
+		// $tanggal_awal = date('d-m-Y', strtotime($this->input->post('tanggal_awal')));
+		// $tanggal_akhir = date('d-m-Y', strtotime($this->input->post('tanggal_akhir')));
+		// $this->M_detail_penjualan->filters($tanggal_awal, $tanggal_akhir);
 		$data['barang_yg_terjual'] = $this->M_detail_penjualan->barang_terjual();
 		$data['sum_terjual'] = $this->M_detail_penjualan->sum_terjual();
 		$html = $this->load->view('admin/laporan/report_barang_terjual', $data, true);

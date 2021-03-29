@@ -54,12 +54,12 @@
 			<?php endforeach; ?>
 		</tbody>
 		<tfoot>
-			<!-- <tr style="text-align: center;">
-				<td colspan="3" align="right"><strong>Total : </strong></td>
-				<?php foreach ($sum_terjual as $sum) : ?>
-					<td><?= $sum->total_terjual ?></td>
+			<tr style="text-align: right;">
+				<td colspan="6" align="right"><strong>Total : </strong></td>
+				<?php foreach ($sum_total_harga_beli as $sum) : ?>
+					<td><?= number_format($sum->total, 0, ',', '.') ?></td>
 				<?php endforeach; ?>
-			</tr> -->
+			</tr>
 		</tfoot>
 	</table>
 	<h5 style="font-weight: normal;">Dicetak pada tanggal : <?= date('d M Y') ?>, Pukul : <?= date('H:i:s') ?></h5>

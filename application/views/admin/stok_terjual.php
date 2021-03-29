@@ -23,7 +23,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="col-12">
-					<!-- <form action="<?= base_url() ?>Laporan_Barang_Terjual/print_pdf" method="post" target="_blank">
+					<!-- <form action="<?= base_url() ?>Stok_Terjual/print_pdf" method="post" target="_blank">
 						<div class="form-group">
 							<label for="">Tanggal Awal</label>
 							<input type="date" name="tanggal_awal" class="form-control">
@@ -36,23 +36,6 @@
 							<button class="btn btn-primary" type="submit">Buka Laporan</button>
 						</div>
 					</form> -->
-
-					<table>
-						<tr>
-							<tbody>
-								<!-- <td>
-									<label>Filter Tanggal</label>
-									<input type="date" id="tanggal_penjualan" name="tanggal_penjualan" value="" class="form-control">
-								</td> -->
-								<td>
-
-									<!-- <a href="<?= base_url() ?>/Laporan_Barang_Terjual/print_pdf" class="btn btn-danger float-right mt-4" target="blank"><i class="fa fa-print"></i> Cetak</a> -->
-
-								</td>
-							</tbody>
-						</tr>
-					</table>
-
 
 					<div class="card">
 						<div class="card-body">

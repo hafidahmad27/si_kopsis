@@ -25,7 +25,7 @@
 					<div class="card shadow">
 						<div class="hilangkan card-header"><strong>Detail Penjualan - <?= $penjualan->no_penjualan ?></strong>
 							<div class="float-right">
-								<a href="<?= base_url('laporan_penjualan/export_detail/' . $penjualan->no_penjualan) ?>" class="btn btn-danger btn-sm" target="blank"><i class="fa fa-file-pdf"></i>&nbsp;&nbsp;Export</a>
+								<a href="<?= base_url('laporan_penjualan/export_detail/' . $penjualan->no_penjualan) ?>" class="btn btn-danger btn-sm" target="blank"><i class="fa fa-file-pdf"></i>&nbsp;&nbsp;Cetak Struk</a>
 								<a href="<?= base_url('laporan_penjualan') ?>" class="btn btn-secondary btn-sm"><i class="fa fa-reply"></i>&nbsp;&nbsp;Kembali</a>
 							</div>
 						</div>

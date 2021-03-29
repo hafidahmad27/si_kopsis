@@ -89,6 +89,14 @@ class M_master extends CI_Model
 		$query = $this->db->get();
 		return $query->result();
 	}
+	public function sum_total_harga_beli()
+	{
+		$this->db->select('SUM(total_harga_beli) as total');
+		$this->db->from('tb_stok_masuk');
+
+		$query = $this->db->get();
+		return $query->result();
+	}
 
 	public function getStokKeluar()
 	{
