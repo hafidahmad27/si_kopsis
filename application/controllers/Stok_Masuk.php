@@ -37,7 +37,7 @@ class Stok_Masuk extends CI_Controller
 		$jam_stok_masuk = $this->input->post('jam_stok_masuk');
 		$jumlah_stok_masuk = $this->input->post('jumlah_stok_masuk');
 		$harga_beli = $this->input->post('harga_beli');
-		$total_harga_beli = $this->input->post('total_harga_beli');
+		// $total_harga_beli = $this->input->post('total_harga_beli');
 
 		$data = array(
 			'id_barang'  => $id_barang,
@@ -45,8 +45,8 @@ class Stok_Masuk extends CI_Controller
 			'tanggal_stok_masuk'  => $tanggal_stok_masuk,
 			'jam_stok_masuk'  => $jam_stok_masuk,
 			'jumlah_stok_masuk'  => $jumlah_stok_masuk,
-			'harga_beli'  => $harga_beli,
-			'total_harga_beli'  => $total_harga_beli
+			'harga_beli'  => str_replace(".", "", $harga_beli)
+			// 'total_harga_beli'  => $total_harga_beli
 		);
 
 		$this->M_master->input_data($data, 'tb_stok_masuk');
@@ -72,7 +72,7 @@ class Stok_Masuk extends CI_Controller
 		$jam_stok_masuk = $this->input->post('jam_stok_masuk');
 		$jumlah_stok_masuk = $this->input->post('jumlah_stok_masuk');
 		$harga_beli = $this->input->post('harga_beli');
-		$total_harga_beli = $this->input->post('total_harga_beli');
+		// $total_harga_beli = $this->input->post('total_harga_beli');
 
 		$data = array(
 			'id_stok_masuk'  => $id_stok_masuk,
@@ -81,8 +81,8 @@ class Stok_Masuk extends CI_Controller
 			'tanggal_stok_masuk'  => $tanggal_stok_masuk,
 			'jam_stok_masuk'  => $jam_stok_masuk,
 			'jumlah_stok_masuk'  => $jumlah_stok_masuk,
-			'harga_beli'  => $harga_beli,
-			'total_harga_beli'  => $total_harga_beli
+			'harga_beli'  => str_replace(".", "", $harga_beli)
+			// 'total_harga_beli'  => $total_harga_beli
 		);
 
 		$where = array(

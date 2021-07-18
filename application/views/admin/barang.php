@@ -100,7 +100,7 @@
 						</div>
 						<div class="form-group">
 							<label>Harga Jual</label>
-							<input type="number" id="harga_jual" name="harga_jual" class="form-control">
+							<input type="text" id="harga_jual" name="harga_jual" maxlength="11" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>Stok Barang</label>

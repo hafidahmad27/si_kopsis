@@ -46,7 +46,7 @@ class Barang extends CI_Controller
 			'kode_barang'  => $kode_barang,
 			'nama_barang'  => $nama_barang,
 			'stok_barang'  => $stok_barang,
-			'harga_jual' => $harga_jual
+			'harga_jual' => str_replace(".", "", $harga_jual)
 		);
 
 		$this->M_master->input_data($data, 'tb_barang');
@@ -76,7 +76,7 @@ class Barang extends CI_Controller
 			'kode_barang'  => $kode_barang,
 			'nama_barang'  => $nama_barang,
 			'stok_barang'  => $stok_barang,
-			'harga_jual' => $harga_jual
+			'harga_jual' => str_replace(".", "", $harga_jual)
 		);
 
 		$where = array(

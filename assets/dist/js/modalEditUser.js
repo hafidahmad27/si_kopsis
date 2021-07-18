@@ -33,6 +33,7 @@ $(function ()
 				$("#nama_user").val(data.nama_user);
 				$("#username").val(data.username);
 				$("#password").val(data.password);
+				$("#level").val(data.level);
 			},
 		});
 	});

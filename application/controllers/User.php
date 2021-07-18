@@ -27,11 +27,13 @@ class User extends CI_Controller
 		$nama_user = $this->input->post('nama_user');
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
+		$level = $this->input->post('level');
 
 		$data = array(
 			'nama_user' => $nama_user,
 			'username' => $username,
-			'password' => $password
+			'password' => $password,
+			'level' => $level
 		);
 
 		$this->M_master->input_data($data, 'tb_user');
@@ -62,11 +64,13 @@ class User extends CI_Controller
 		$nama_user = $this->input->post('nama_user');
 		$username = $this->input->post('username');
 		$password = $this->input->post('password');
+		$level = $this->input->post('level');
 
 		$data = array(
 			'nama_user' => $nama_user,
 			'username' => $username,
-			'password' => $password
+			'password' => $password,
+			'level' => $level
 		);
 
 		$where = array(

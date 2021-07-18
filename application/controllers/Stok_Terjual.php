@@ -17,7 +17,8 @@ class Stok_Terjual extends CI_Controller
 	public function index()
 	{
 		if ($this->session->userdata('status') == 'login') {
-			$data['barang_yg_terjual'] = $this->M_detail_penjualan->barang_terjual();
+			$data['barang_terjual_a'] = $this->M_detail_penjualan->barang_terjual_a();
+			// $data['barang_terjual_b'] = $this->M_detail_penjualan->barang_terjual_b();
 			$this->load->view('templates/header');
 			$this->load->view('templates/sidebar');
 			$this->load->view('admin/stok_terjual', $data);
@@ -37,7 +38,7 @@ class Stok_Terjual extends CI_Controller
 		// $tanggal_awal = date('d-m-Y', strtotime($this->input->post('tanggal_awal')));
 		// $tanggal_akhir = date('d-m-Y', strtotime($this->input->post('tanggal_akhir')));
 		// $this->M_detail_penjualan->filters($tanggal_awal, $tanggal_akhir);
-		$data['barang_yg_terjual'] = $this->M_detail_penjualan->barang_terjual();
+		$data['barang_yg_terjual'] = $this->M_detail_penjualan->barang_yg_terjual();
 		$data['sum_terjual'] = $this->M_detail_penjualan->sum_terjual();
 		$html = $this->load->view('admin/laporan/report_barang_terjual', $data, true);
 

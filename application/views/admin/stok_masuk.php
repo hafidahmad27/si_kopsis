@@ -111,12 +111,12 @@
 						</div>
 						<div class="form-group">
 							<label>Harga Beli</label>
-							<input type="number" id="harga_beli" name="harga_beli" class="form-control" min="0">
+							<input type="text" id="harga_beli" name="harga_beli" class="form-control" maxlength="11">
 						</div>
-						<div class="form-group">
+						<!-- <div class="form-group">
 							<label>Subtotal Harga Beli</label>
-							<input type="number" id="total_harga_beli" name="total_harga_beli" class=" form-control" min="0" readonly>
-						</div>
+							<input type="text" id="total_harga_beli" name="total_harga_beli" class="form-control" min="0" readonly>
+						</div> -->
 						<div class="form-group">
 							<label>Nama Supplier</label>
 							<select id="id_supplier" name="id_supplier" class="form-control">

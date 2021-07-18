@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 28, 2021 at 10:19 AM
--- Server version: 10.4.17-MariaDB
--- PHP Version: 7.4.15
+-- Generation Time: Jul 18, 2021 at 06:22 AM
+-- Server version: 10.4.19-MariaDB
+-- PHP Version: 7.4.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -41,15 +41,20 @@ CREATE TABLE `tb_barang` (
 --
 
 INSERT INTO `tb_barang` (`id_barang`, `id_kategori`, `kode_barang`, `nama_barang`, `harga_jual`, `stok_barang`) VALUES
-(1, 1, 'BRG0001', 'HVS', 500, 92),
+(1, 1, 'BRG0001', 'HVS', 500, 89),
 (2, 1, 'BRG0002', 'Bufallo', 500, 0),
-(3, 1, 'BRG0003', 'Folio Bergaris', 500, 0),
-(4, 1, 'BRG0004', 'Mika', 500, 88),
-(5, 2, 'BRG0005', 'Amplop sedang', 500, 490),
+(3, 1, 'BRG0003', 'Folio Bergaris', 600, 23),
+(4, 1, 'BRG0004', 'Mika', 500, 70),
+(5, 2, 'BRG0005', 'Amplop sedang', 500, 484),
 (6, 1, 'BRG0006', 'Amplop besar', 500, 0),
-(7, 3, 'BRG0007', 'CD-R', 3500, 94),
+(7, 3, 'BRG0007', 'CD-R', 3500, 91),
 (8, 3, 'BRG0008', 'DVD-RW', 5500, 0),
-(9, 3, 'BRG0009', 'CD-RW', 5000, 0);
+(9, 3, 'BRG0009', 'CD-RW', 5000, 0),
+(10, 5, 'BRG0010', 'topi', 15000, -7),
+(11, 5, 'BRG0011', 'sabuk', 20000, 79),
+(12, 12, 'BRG0012', 'yakult', 0, 50),
+(13, 7, 'BRG0013', 'ss', 760099, 15),
+(14, 9, 'BRG0014', 'atm', 1000, 500);
 
 -- --------------------------------------------------------
 
@@ -82,7 +87,34 @@ INSERT INTO `tb_detail_penjualan` (`no_penjualan`, `nama_barang`, `harga_jual`, 
 ('TR1616839959', 'HVS', '500', 1, '500'),
 ('TR1616918532', 'Mika', '500', 1, '500'),
 ('TR1616918552', 'Mika', '500', 3, '1500'),
-('TR1616918552', 'HVS', '500', 3, '1500');
+('TR1616918552', 'HVS', '500', 3, '1500'),
+('TR1626240411', 'Amplop sedang', '500', 1, '500'),
+('TR1626240411', 'CD-R', '3500', 3, '10500'),
+('TR1626240411', 'HVS', '500', 1, '500'),
+('TR1626315741', 'dasi', '15000', 2, '30000'),
+('TR1626315741', 'sabuk', '20000', 1, '20000'),
+('TR1626500440', 'Folio Bergaris', '600', 1, '600'),
+('TR1626506961', 'Amplop sedang', '500', 5, '2500'),
+('TR1626507003', 'sabuk', '20000', 20, '400000'),
+('TR1626509853', 'Folio Bergaris', '600', 10, '6000'),
+('TR1626510799', 'HVS', '500', 1, '500'),
+('TR1626510877', 'HVS', '500', 1, '500'),
+('TR1626567431', 'Folio Bergaris', '600', 3, '1800'),
+('TR1626567604', 'Folio Bergaris', '600', 1, '600'),
+('TR1626567913', 'Folio Bergaris', '600', 2, '1200'),
+('TR1626568044', 'Folio Bergaris', '600', 4, '2400'),
+('TR1626568127', 'Folio Bergaris', '600', 5, '3000'),
+('TR1626568212', 'Folio Bergaris', '600', 2, '1200'),
+('TR1626568295', 'Folio Bergaris', '600', 5, '3000'),
+('TR1626568416', 'Mika', '500', 3, '1500'),
+('TR1626568416', 'Folio Bergaris', '600', 1, '600'),
+('TR1626568480', 'topi', '15000', 2, '30000'),
+('TR1626568520', 'Mika', '500', 9, '4500'),
+('TR1626568657', 'Folio Bergaris', '600', 2, '1200'),
+('TR1626568657', 'Mika', '500', 3, '1500'),
+('TR1626568699', 'Folio Bergaris', '600', 1, '600'),
+('TR1626581815', 'Mika', '500', 3, '1500'),
+('TR1626582078', 'topi', '15000', 10, '150000');
 
 -- --------------------------------------------------------
 
@@ -141,7 +173,29 @@ INSERT INTO `tb_penjualan` (`id`, `no_penjualan`, `nama_kasir`, `tanggal_penjual
 (6, 'TR1616732644', 'admin', '26/03/2021', '11:24:04', 500),
 (7, 'TR1616839959', 'admin', '27/03/2021', '17:12:39', 500),
 (8, 'TR1616918532', 'admin', '28/03/2021', '15:02:12', 500),
-(9, 'TR1616918552', 'admin', '28/03/2021', '15:02:32', 3000);
+(9, 'TR1616918552', 'admin', '28/03/2021', '15:02:32', 3000),
+(10, 'TR1626240411', 'admin', '14/07/2021', '12:26:51', 11500),
+(11, 'TR1626315741', 'admin', '15/07/2021', '09:22:21', 50000),
+(12, 'TR1626500440', 'kaeka', '17/07/2021', '12:40:40', 600),
+(13, 'TR1626506961', 'admin', '17/07/2021', '14:29:21', 2500),
+(14, 'TR1626507003', 'admin', '17/07/2021', '14:30:03', 400000),
+(15, 'TR1626509853', 'admin', '17/07/2021', '15:17:33', 6000),
+(16, 'TR1626510799', 'admin', '17/07/2021', '15:33:19', 500),
+(17, 'TR1626510877', 'admin', '17/07/2021', '15:34:37', 500),
+(18, 'TR1626567431', 'admin', '18/07/2021', '07:17:11', 1800),
+(19, 'TR1626567604', 'admin', '18/07/2021', '07:20:04', 600),
+(20, 'TR1626567913', 'admin', '18/07/2021', '07:25:13', 1200),
+(21, 'TR1626568044', 'admin', '18/07/2021', '07:27:24', 2400),
+(22, 'TR1626568127', 'admin', '18/07/2021', '07:28:47', 3000),
+(23, 'TR1626568212', 'admin', '18/07/2021', '07:30:12', 1200),
+(24, 'TR1626568295', 'admin', '18/07/2021', '07:31:35', 3000),
+(25, 'TR1626568416', 'admin', '18/07/2021', '07:33:36', 2100),
+(26, 'TR1626568480', 'admin', '18/07/2021', '07:34:40', 30000),
+(27, 'TR1626568520', 'admin', '18/07/2021', '07:35:20', 4500),
+(28, 'TR1626568657', 'admin', '18/07/2021', '07:37:37', 2700),
+(29, 'TR1626568699', 'admin', '18/07/2021', '07:38:19', 600),
+(30, 'TR1626581815', 'admin', '18/07/2021', '11:16:55', 1500),
+(31, 'TR1626582078', 'kaeka', '18/07/2021', '11:21:18', 150000);
 
 -- --------------------------------------------------------
 
@@ -206,7 +260,14 @@ INSERT INTO `tb_stok_masuk` (`id_stok_masuk`, `id_barang`, `id_supplier`, `tangg
 (1, 1, 2, '03/02/2021', '08:18:42', 100, 250, 25000),
 (2, 7, 3, '03/02/2021', '12:38:23', 100, 2000, 200000),
 (3, 4, 2, '04/02/2021', '11:07:57', 100, 400, 40000),
-(4, 5, 2, '04/02/2021', '14:35:19', 500, 300, 150000);
+(4, 5, 2, '04/02/2021', '14:35:19', 500, 300, 150000),
+(5, 3, 2, '14/07/2021', '12:35:13', 50, 300, 15000),
+(6, 3, 2, '14/07/2021', '12:37:11', 10, 500, 5000),
+(7, 10, 1, '15/07/2021', '08:08:47', 5, 12000, 60000),
+(8, 11, 1, '15/07/2021', '08:10:56', 100, 17000, 1700000),
+(9, 12, 2, '16/07/2021', '07:52:46', 50, 20000, 0),
+(10, 13, 3, '16/07/2021', '07:59:49', 15, 3500, 0),
+(11, 14, 2, '16/07/2021', '08:06:17', 500, 500, 0);
 
 --
 -- Triggers `tb_stok_masuk`
@@ -263,16 +324,19 @@ CREATE TABLE `tb_user` (
   `id_user` int(11) NOT NULL,
   `nama_user` varchar(20) NOT NULL,
   `username` varchar(15) NOT NULL,
-  `password` varchar(15) NOT NULL
+  `password` varchar(15) NOT NULL,
+  `level` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `tb_user`
 --
 
-INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `password`) VALUES
-(1, 'Admin', 'admin', 'admin'),
-(2, 'Rona Aniwidjaja', 'ronawidjaja', '1234567');
+INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `password`, `level`) VALUES
+(1, 'Admin', 'admin', 'admin', 'admin'),
+(2, 'Eka', 'kaeka', 'kasir123', 'kasir'),
+(3, 'Budi Pratama', 'budi_prap', 'gudang123', 'gudang'),
+(4, 'Rona Aniwidjaja', 'rona', 'pimpinan123', 'pimpinan');
 
 --
 -- Indexes for dumped tables
@@ -334,7 +398,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_kategori`
@@ -346,7 +410,7 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_penjualan`
 --
 ALTER TABLE `tb_penjualan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `tb_stok_keluar`
@@ -358,7 +422,7 @@ ALTER TABLE `tb_stok_keluar`
 -- AUTO_INCREMENT for table `tb_stok_masuk`
 --
 ALTER TABLE `tb_stok_masuk`
-  MODIFY `id_stok_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_stok_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `tb_supplier`
@@ -370,7 +434,7 @@ ALTER TABLE `tb_supplier`
 -- AUTO_INCREMENT for table `tb_user`
 --
 ALTER TABLE `tb_user`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

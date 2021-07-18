@@ -22,17 +22,36 @@ class M_detail_penjualan extends CI_Model
 		return $this->db->get_where('tb_detail_penjualan', array('no_penjualan' => $no_penjualan))->row();
 	}
 
-	public function barang_terjual()
+	public function barang_terjual_a()
 	{
-		$this->db->select('tanggal_penjualan, nama_barang, harga_jual, SUM(jumlah_barang) as jumlah_barang_terjual, SUM(sub_total) as sub_total');
-		$this->db->from('tb_penjualan');
-		$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
+		$this->db->select('tanggal_penjualan, tb_detail_penjualan.nama_barang, SUM(jumlah_barang) as jumlah_barang_terjual');
+		$this->db->from('tb_barang');
+		$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.nama_barang = tb_barang.nama_barang');
+		$this->db->join('tb_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
+		$this->db->join('tb_kategori', 'tb_barang.id_kategori = tb_kategori.id_kategori');
+		$this->db->group_by('tanggal_penjualan');
 		$this->db->group_by('nama_barang');
 		$this->db->order_by('tanggal_penjualan', 'DESC');
 
 		$query = $this->db->get();
 		return $query->result();
 	}
+
+	public function barang_terjual_b()
+	{
+		$this->db->select('tanggal_penjualan, tb_detail_penjualan.nama_barang, tb_kategori.nama_kategori, tb_barang.harga_jual, SUM(jumlah_barang) as jumlah_barang_terjual, SUM(sub_total) as sub_total');
+		$this->db->from('tb_barang');
+		$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.nama_barang = tb_barang.nama_barang');
+		$this->db->join('tb_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
+		$this->db->join('tb_kategori', 'tb_barang.id_kategori = tb_kategori.id_kategori');
+
+		$this->db->group_by('nama_barang');
+		$this->db->order_by('tanggal_penjualan', 'DESC');
+
+		$query = $this->db->get();
+		return $query->result();
+	}
+
 	public function sum_terjual()
 	{
 		$this->db->select('SUM(jumlah_barang) as sum_jumlah_barang, SUM(sub_total) as total');
@@ -49,6 +68,7 @@ class M_detail_penjualan extends CI_Model
 		$this->db->join('tb_stok_masuk', 'tb_stok_masuk.id_barang = tb_barang.id_barang');
 		$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.nama_barang = tb_barang.nama_barang');
 		$this->db->join('tb_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
+		$this->db->group_by('tanggal_penjualan');
 		$this->db->group_by('nama_barang');
 		$this->db->order_by('tanggal_penjualan', 'DESC');
 

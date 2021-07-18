@@ -7,14 +7,12 @@ $(function ()
 			"action",
 			"http://localhost/si_kopsis/Stok_Masuk/tambah_aksi"
 		);
-		$('#jumlah_stok_masuk, #harga_beli').on('input',function() {
-			var qty = parseInt($('#jumlah_stok_masuk').val());
-			var price = parseFloat($('#harga_beli').val());
-			$('#total_harga_beli').val((qty * price ? qty * price : 0));
-		});
-		// $('input[name="total_harga_beli"]').on('keydown keyup change blur', function() {
-		// 	$('input[name="total_harga_beli"]').val($('input[name="jumlah_stok_masuk"]').val() * $('input[name="harga_beli"]').val());
-		// })
+		
+		// $('#jumlah_stok_masuk, #harga_beli').on('input',function() {
+		// 	var qty = parseInt($('#jumlah_stok_masuk').val());
+		// 	var price = parseFloat($('#harga_beli').val());
+		// 	$('#total_harga_beli').val((qty * price ? qty * price : 0));
+		// });
 		document.getElementById('formResetData').reset();
 	});
 	

@@ -32,6 +32,7 @@
 										<th>Nama User</th>
 										<th>Username</th>
 										<th>Password</th>
+										<th>Level</th>
 										<th>Aksi</th>
 									</tr>
 								</thead>
@@ -44,6 +45,7 @@
 											<td><?= $users->nama_user ?></td>
 											<td><?= $users->username ?></td>
 											<td><?= $users->password ?></td>
+											<td><?= $users->level ?></td>
 											<td>
 												<a href="<?= base_url() ?>/User/edit/<?= $users->id_user; ?>" class="btn btn-success btn-sm btnEditus" data-toggle="modal" data-target="#formModal" data-id="<?= $users->id_user; ?>"><i class="fa fa-edit"></i></a>
 												<a onclick="return confirm('Apakah anda yakin untuk menghapus?')" href="<?= base_url() ?>/User/hapus/<?= $users->id_user; ?>" class="btn btn-danger btn-sm"><i class="fa fa-trash"></i></a>
@@ -90,6 +92,14 @@
 						<div class="form-group">
 							<label>Password</label>
 							<input type="text" id="password" name="password" class="form-control">
+						</div>
+						<div class="form-group">
+							<label>Level</label>
+							<select name="level" id="level" class="form-control">
+								<option value="kasir">Kasir</option>
+								<option value="gudang">Gudang</option>
+								<option value="pimpinan">Pimpinan</option>
+							</select>
 						</div>
 						<div class="modal-footer">
 							<button type="close" class="btn btn-danger" data-dismiss="modal">Close</button>

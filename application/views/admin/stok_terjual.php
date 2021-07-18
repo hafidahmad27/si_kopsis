@@ -52,7 +52,7 @@
 								</thead>
 								<tbody>
 									<?php $no = 1;
-									foreach ($barang_yg_terjual as $terjual) : ?>
+									foreach ($barang_terjual_a as $terjual) : ?>
 										<tr>
 											<td><?= $no++ ?></td>
 											<td style="text-align: center;"><?= $terjual->tanggal_penjualan ?></td>

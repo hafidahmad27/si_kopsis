@@ -81,7 +81,7 @@ class M_master extends CI_Model
 
 	public function getStokMasuk()
 	{
-		$this->db->select('id_stok_masuk, tanggal_stok_masuk, jam_stok_masuk, nama_barang, jumlah_stok_masuk, harga_beli, total_harga_beli, nama_supplier');
+		$this->db->select('id_stok_masuk, tanggal_stok_masuk, jam_stok_masuk, nama_barang, jumlah_stok_masuk, harga_beli, (jumlah_stok_masuk*harga_beli) as total_harga_beli, nama_supplier');
 		$this->db->from('tb_barang');
 		$this->db->join('tb_stok_masuk', 'tb_stok_masuk.id_barang = tb_barang.id_barang');
 		$this->db->join('tb_supplier', 'tb_stok_masuk.id_supplier = tb_supplier.id_supplier');
