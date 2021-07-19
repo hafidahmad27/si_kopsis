@@ -25,16 +25,14 @@
 			<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
 				<!-- Add icons to the links using the .nav-icon class
 				with font-awesome or any other icon font library -->
-				<?php if ($this->session->userdata('level') == 'admin' || $this->session->userdata('level') == 'pimpinan') : ?>
-					<li class="nav-item">
-						<a href="<?= site_url(); ?>dashboard" class="nav-link <?php echo $uri == 'dashboard' ? 'active' : 'no' ?>">
-							<i class="nav-icon fas fa-tachometer-alt"></i>
-							<p>
-								Dashboard
-							</p>
-						</a>
-					</li>
-				<?php endif; ?>
+				<li class="nav-item">
+					<a href="<?= site_url(); ?>dashboard" class="nav-link <?php echo $uri == 'dashboard' ? 'active' : 'no' ?>">
+						<i class="nav-icon fas fa-tachometer-alt"></i>
+						<p>
+							Dashboard
+						</p>
+					</a>
+				</li>
 
 				<?php if ($this->session->userdata('level') == 'admin' || $this->session->userdata('level') == 'gudang') : ?>
 					<li class="nav-item">

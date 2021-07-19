@@ -25,7 +25,7 @@
 			<!-- BAR CHART -->
 			<div class="card card-primary">
 				<div class="card-header">
-					<h3 class="card-title">Bar Chart</h3>
+					<h3 class="card-title">Total Keuntungan per Tanggal</h3>
 				</div>
 				<div class="card-body">
 					<div class="chart">

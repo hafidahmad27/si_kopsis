@@ -158,16 +158,14 @@
 		var barChartData = {
 			labels: [
 				<?php
-				foreach ($barang_terjual_a as $terjual) : ?>
+				foreach ($total_keuntungan_per_tgl as $terjual) : ?>
 					<?= "'" . $terjual->tanggal_penjualan . "',"; ?>
 				<?php endforeach; ?>
 			],
 			datasets: [{
 				label: [
-					<?php
-					foreach ($barang_terjual_a as $terjual) : ?>
-						<?= "'" . $terjual->nama_barang . "',"; ?>
-					<?php endforeach; ?>
+					'Total Keuntungan per Tanggal'
+
 				],
 				backgroundColor: 'rgba(210, 214, 222, 1)',
 				borderColor: 'rgba(210, 214, 222, 1)',
@@ -178,8 +176,8 @@
 				pointHighlightStroke: 'rgba(220,220,220,1)',
 				data: [
 					<?php
-					foreach ($barang_terjual_a as $terjual) : ?>
-						<?= "'" . $terjual->jumlah_barang_terjual . "',"; ?>
+					foreach ($total_keuntungan_per_tgl as $terjual) : ?>
+						<?= "'" . $terjual->total_keuntungan . "',"; ?>
 					<?php endforeach; ?>
 				]
 			}, ]

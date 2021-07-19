@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 18, 2021 at 06:22 AM
+-- Generation Time: Jul 19, 2021 at 03:15 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -41,20 +41,36 @@ CREATE TABLE `tb_barang` (
 --
 
 INSERT INTO `tb_barang` (`id_barang`, `id_kategori`, `kode_barang`, `nama_barang`, `harga_jual`, `stok_barang`) VALUES
-(1, 1, 'BRG0001', 'HVS', 500, 89),
-(2, 1, 'BRG0002', 'Bufallo', 500, 0),
-(3, 1, 'BRG0003', 'Folio Bergaris', 600, 23),
-(4, 1, 'BRG0004', 'Mika', 500, 70),
-(5, 2, 'BRG0005', 'Amplop sedang', 500, 484),
-(6, 1, 'BRG0006', 'Amplop besar', 500, 0),
-(7, 3, 'BRG0007', 'CD-R', 3500, 91),
-(8, 3, 'BRG0008', 'DVD-RW', 5500, 0),
-(9, 3, 'BRG0009', 'CD-RW', 5000, 0),
-(10, 5, 'BRG0010', 'topi', 15000, -7),
-(11, 5, 'BRG0011', 'sabuk', 20000, 79),
-(12, 12, 'BRG0012', 'yakult', 0, 50),
-(13, 7, 'BRG0013', 'ss', 760099, 15),
-(14, 9, 'BRG0014', 'atm', 1000, 500);
+(1, 1, 'BRG0001', 'HVS', 500, 479),
+(2, 1, 'BRG0002', 'bufallo', 1000, 493),
+(3, 1, 'BRG0003', 'folio bergaris', 0, 0),
+(4, 1, 'BRG0004', 'mika', 0, 0),
+(5, 2, 'BRG0005', 'amplop sedang', 0, 0),
+(6, 2, 'BRG0006', 'amplop besar', 0, 0),
+(7, 3, 'BRG0007', 'CD-R', 3500, 92),
+(8, 3, 'BRG0008', 'DVD-RW', 5500, 94),
+(9, 3, 'BRG0009', 'CD-RW', 5000, 98),
+(10, 4, 'BRG0010', 'stofmap', 0, 0),
+(11, 4, 'BRG0011', 'clear holder (mika)', 0, 0),
+(12, 4, 'BRG0012', 'map spring', 0, 0),
+(13, 4, 'BRG0013', 'dokumen qipper isi 60', 0, 0),
+(14, 4, 'BRG0014', 'mika berkancing', 0, 0),
+(15, 4, 'BRG0015', 'snail hecter', 0, 0),
+(16, 5, 'BRG0016', 'double tape', 0, 0),
+(17, 5, 'BRG0017', 'keplek + tali', 0, 0),
+(18, 5, 'BRG0018', 'isolasi', 0, 0),
+(19, 5, 'BRG0019', 'tissu', 0, 0),
+(20, 5, 'BRG0020', 'stapler kecil', 0, 0),
+(21, 5, 'BRG0021', 'stapler besar', 0, 0),
+(22, 5, 'BRG0022', 'stabillo boss', 0, 0),
+(23, 5, 'BRG0023', 'bed', 0, 0),
+(24, 5, 'BRG0024', 'topi', 0, 0),
+(25, 5, 'BRG0025', 'dasi', 0, 0),
+(26, 5, 'BRG0026', 'sabuk', 0, 0),
+(27, 5, 'BRG0027', 'hasduk', 0, 0),
+(28, 5, 'BRG0028', 'kaos kaki', 0, 0),
+(29, 5, 'BRG0029', 'materai', 0, 0),
+(30, 5, 'BRG0030', 'binder clip', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -75,46 +91,21 @@ CREATE TABLE `tb_detail_penjualan` (
 --
 
 INSERT INTO `tb_detail_penjualan` (`no_penjualan`, `nama_barang`, `harga_jual`, `jumlah_barang`, `sub_total`) VALUES
-('TR1612315192', 'HVS', '500', 2, '1000'),
-('TR1612330764', 'CD-R', '3500', 3, '10500'),
-('TR1612330764', 'HVS', '500', 1, '500'),
-('TR1612411761', 'Mika', '500', 5, '2500'),
-('TR1612424196', 'Amplop sedang', '500', 10, '5000'),
-('TR1612424196', 'Mika', '500', 2, '1000'),
-('TR1616671241', 'CD-R', '3500', 3, '10500'),
-('TR1616671241', 'Mika', '500', 1, '500'),
-('TR1616732644', 'HVS', '500', 1, '500'),
-('TR1616839959', 'HVS', '500', 1, '500'),
-('TR1616918532', 'Mika', '500', 1, '500'),
-('TR1616918552', 'Mika', '500', 3, '1500'),
-('TR1616918552', 'HVS', '500', 3, '1500'),
-('TR1626240411', 'Amplop sedang', '500', 1, '500'),
-('TR1626240411', 'CD-R', '3500', 3, '10500'),
-('TR1626240411', 'HVS', '500', 1, '500'),
-('TR1626315741', 'dasi', '15000', 2, '30000'),
-('TR1626315741', 'sabuk', '20000', 1, '20000'),
-('TR1626500440', 'Folio Bergaris', '600', 1, '600'),
-('TR1626506961', 'Amplop sedang', '500', 5, '2500'),
-('TR1626507003', 'sabuk', '20000', 20, '400000'),
-('TR1626509853', 'Folio Bergaris', '600', 10, '6000'),
-('TR1626510799', 'HVS', '500', 1, '500'),
-('TR1626510877', 'HVS', '500', 1, '500'),
-('TR1626567431', 'Folio Bergaris', '600', 3, '1800'),
-('TR1626567604', 'Folio Bergaris', '600', 1, '600'),
-('TR1626567913', 'Folio Bergaris', '600', 2, '1200'),
-('TR1626568044', 'Folio Bergaris', '600', 4, '2400'),
-('TR1626568127', 'Folio Bergaris', '600', 5, '3000'),
-('TR1626568212', 'Folio Bergaris', '600', 2, '1200'),
-('TR1626568295', 'Folio Bergaris', '600', 5, '3000'),
-('TR1626568416', 'Mika', '500', 3, '1500'),
-('TR1626568416', 'Folio Bergaris', '600', 1, '600'),
-('TR1626568480', 'topi', '15000', 2, '30000'),
-('TR1626568520', 'Mika', '500', 9, '4500'),
-('TR1626568657', 'Folio Bergaris', '600', 2, '1200'),
-('TR1626568657', 'Mika', '500', 3, '1500'),
-('TR1626568699', 'Folio Bergaris', '600', 1, '600'),
-('TR1626581815', 'Mika', '500', 3, '1500'),
-('TR1626582078', 'topi', '15000', 10, '150000');
+('TR1626602768', 'HVS', '500', 4, '2000'),
+('TR1626602768', 'CD-RW', '5000', 2, '10000'),
+('TR1626602995', 'bufallo', '1000', 1, '1000'),
+('TR1626603052', 'HVS', '500', 5, '2500'),
+('TR1626603052', 'bufallo', '1000', 1, '1000'),
+('TR1626603254', 'DVD-RW', '5500', 3, '16500'),
+('TR1626603254', 'CD-R', '3500', 1, '3500'),
+('TR1626603352', 'bufallo', '1000', 2, '2000'),
+('TR1626603352', 'HVS', '500', 12, '6000'),
+('TR1626603352', 'DVD-RW', '5500', 1, '5500'),
+('TR1626623687', 'CD-R', '3500', 2, '7000'),
+('TR1626623687', 'bufallo', '1000', 1, '1000'),
+('TR1626657005', 'CD-R', '3500', 5, '17500'),
+('TR1626657070', 'bufallo', '1000', 2, '2000'),
+('TR1626657070', 'DVD-RW', '5500', 2, '11000');
 
 -- --------------------------------------------------------
 
@@ -165,37 +156,14 @@ CREATE TABLE `tb_penjualan` (
 --
 
 INSERT INTO `tb_penjualan` (`id`, `no_penjualan`, `nama_kasir`, `tanggal_penjualan`, `jam_penjualan`, `total`) VALUES
-(1, 'TR1612315192', 'admin', '03/02/2021', '08:19:52', 1000),
-(2, 'TR1612330764', 'admin', '03/02/2021', '12:39:24', 11000),
-(3, 'TR1612411761', 'admin', '04/02/2021', '11:09:21', 2500),
-(4, 'TR1612424196', 'admin', '04/02/2021', '14:36:36', 6000),
-(5, 'TR1616671241', 'admin', '25/03/2021', '18:20:41', 11000),
-(6, 'TR1616732644', 'admin', '26/03/2021', '11:24:04', 500),
-(7, 'TR1616839959', 'admin', '27/03/2021', '17:12:39', 500),
-(8, 'TR1616918532', 'admin', '28/03/2021', '15:02:12', 500),
-(9, 'TR1616918552', 'admin', '28/03/2021', '15:02:32', 3000),
-(10, 'TR1626240411', 'admin', '14/07/2021', '12:26:51', 11500),
-(11, 'TR1626315741', 'admin', '15/07/2021', '09:22:21', 50000),
-(12, 'TR1626500440', 'kaeka', '17/07/2021', '12:40:40', 600),
-(13, 'TR1626506961', 'admin', '17/07/2021', '14:29:21', 2500),
-(14, 'TR1626507003', 'admin', '17/07/2021', '14:30:03', 400000),
-(15, 'TR1626509853', 'admin', '17/07/2021', '15:17:33', 6000),
-(16, 'TR1626510799', 'admin', '17/07/2021', '15:33:19', 500),
-(17, 'TR1626510877', 'admin', '17/07/2021', '15:34:37', 500),
-(18, 'TR1626567431', 'admin', '18/07/2021', '07:17:11', 1800),
-(19, 'TR1626567604', 'admin', '18/07/2021', '07:20:04', 600),
-(20, 'TR1626567913', 'admin', '18/07/2021', '07:25:13', 1200),
-(21, 'TR1626568044', 'admin', '18/07/2021', '07:27:24', 2400),
-(22, 'TR1626568127', 'admin', '18/07/2021', '07:28:47', 3000),
-(23, 'TR1626568212', 'admin', '18/07/2021', '07:30:12', 1200),
-(24, 'TR1626568295', 'admin', '18/07/2021', '07:31:35', 3000),
-(25, 'TR1626568416', 'admin', '18/07/2021', '07:33:36', 2100),
-(26, 'TR1626568480', 'admin', '18/07/2021', '07:34:40', 30000),
-(27, 'TR1626568520', 'admin', '18/07/2021', '07:35:20', 4500),
-(28, 'TR1626568657', 'admin', '18/07/2021', '07:37:37', 2700),
-(29, 'TR1626568699', 'admin', '18/07/2021', '07:38:19', 600),
-(30, 'TR1626581815', 'admin', '18/07/2021', '11:16:55', 1500),
-(31, 'TR1626582078', 'kaeka', '18/07/2021', '11:21:18', 150000);
+(1, 'TR1626602768', 'admin', '02/04/2021', '17:06:08', 12000),
+(2, 'TR1626602995', 'admin', '03/04/2021', '17:09:55', 1000),
+(3, 'TR1626603052', 'admin', '10/05/2021', '17:10:52', 3500),
+(4, 'TR1626603254', 'admin', '09/06/2021', '17:14:14', 20000),
+(5, 'TR1626603352', 'admin', '18/07/2021', '17:15:52', 13500),
+(6, 'TR1626623687', 'admin', '18/07/2021', '22:54:47', 8000),
+(7, 'TR1626657005', 'admin', '03/04/2021', '08:10:05', 17500),
+(8, 'TR1626657070', 'admin', '10/05/2021', '08:11:10', 13000);
 
 -- --------------------------------------------------------
 
@@ -257,17 +225,11 @@ CREATE TABLE `tb_stok_masuk` (
 --
 
 INSERT INTO `tb_stok_masuk` (`id_stok_masuk`, `id_barang`, `id_supplier`, `tanggal_stok_masuk`, `jam_stok_masuk`, `jumlah_stok_masuk`, `harga_beli`, `total_harga_beli`) VALUES
-(1, 1, 2, '03/02/2021', '08:18:42', 100, 250, 25000),
-(2, 7, 3, '03/02/2021', '12:38:23', 100, 2000, 200000),
-(3, 4, 2, '04/02/2021', '11:07:57', 100, 400, 40000),
-(4, 5, 2, '04/02/2021', '14:35:19', 500, 300, 150000),
-(5, 3, 2, '14/07/2021', '12:35:13', 50, 300, 15000),
-(6, 3, 2, '14/07/2021', '12:37:11', 10, 500, 5000),
-(7, 10, 1, '15/07/2021', '08:08:47', 5, 12000, 60000),
-(8, 11, 1, '15/07/2021', '08:10:56', 100, 17000, 1700000),
-(9, 12, 2, '16/07/2021', '07:52:46', 50, 20000, 0),
-(10, 13, 3, '16/07/2021', '07:59:49', 15, 3500, 0),
-(11, 14, 2, '16/07/2021', '08:06:17', 500, 500, 0);
+(1, 1, 2, '18/07/2021', '16:55:10', 500, 300, 0),
+(2, 2, 2, '18/07/2021', '16:55:39', 500, 750, 0),
+(3, 7, 3, '18/07/2021', '16:56:12', 100, 2500, 0),
+(4, 8, 3, '18/07/2021', '16:57:48', 100, 4000, 0),
+(5, 9, 3, '18/07/2021', '16:58:33', 100, 3500, 0);
 
 --
 -- Triggers `tb_stok_masuk`
@@ -310,9 +272,9 @@ CREATE TABLE `tb_supplier` (
 --
 
 INSERT INTO `tb_supplier` (`id_supplier`, `nama_supplier`, `alamat_supplier`, `telepon`, `keterangan`) VALUES
-(1, 'Purnama Uniform', 'Jl. Rungkut Asri Barat I No.2, Sby', '081259504853', 'Distributor Seragam Sekolah'),
+(1, 'Purnama Uniform', 'Jl. Rungkut Asri Barat No. 2, Sby', '082145467675', 'Distributor Seragam Sekolah'),
 (2, 'TBMO', 'Jl. Merr Kalijudan, Kec. Mulyorejo, Sby', '03199044299', 'Menjual apa saja'),
-(3, 'S3 Komputer', 'Jl. Semolowaru Tengah I No.68, Sby', '081232588337', 'Distributor Accesories Komputer');
+(3, 'S3 Komputer', 'Jl. Semolowaru Tengah I No. 68, Sby', '081232588337', 'Grosir Accesories Komputer');
 
 -- --------------------------------------------------------
 
@@ -334,9 +296,9 @@ CREATE TABLE `tb_user` (
 
 INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `password`, `level`) VALUES
 (1, 'Admin', 'admin', 'admin', 'admin'),
-(2, 'Eka', 'kaeka', 'kasir123', 'kasir'),
-(3, 'Budi Pratama', 'budi_prap', 'gudang123', 'gudang'),
-(4, 'Rona Aniwidjaja', 'rona', 'pimpinan123', 'pimpinan');
+(2, 'Eka', 'kasir', 'ekasir', 'kasir'),
+(3, 'Budi Pratama', 'gudang', 'budipra', 'gudang'),
+(4, 'Rona Aniwidjaja', 'pimpinan', 'ronawidjaja', 'pimpinan');
 
 --
 -- Indexes for dumped tables
@@ -348,7 +310,15 @@ INSERT INTO `tb_user` (`id_user`, `nama_user`, `username`, `password`, `level`) 
 ALTER TABLE `tb_barang`
   ADD PRIMARY KEY (`id_barang`),
   ADD UNIQUE KEY `kode_barang` (`kode_barang`),
-  ADD KEY `id_kategori` (`id_kategori`);
+  ADD KEY `id_kategori` (`id_kategori`),
+  ADD KEY `nama_barang` (`nama_barang`);
+
+--
+-- Indexes for table `tb_detail_penjualan`
+--
+ALTER TABLE `tb_detail_penjualan`
+  ADD KEY `no_penjualan` (`no_penjualan`),
+  ADD KEY `nama_barang` (`nama_barang`);
 
 --
 -- Indexes for table `tb_kategori`
@@ -360,7 +330,8 @@ ALTER TABLE `tb_kategori`
 -- Indexes for table `tb_penjualan`
 --
 ALTER TABLE `tb_penjualan`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `no_penjualan` (`no_penjualan`);
 
 --
 -- Indexes for table `tb_stok_keluar`
@@ -398,7 +369,7 @@ ALTER TABLE `tb_user`
 -- AUTO_INCREMENT for table `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `tb_kategori`
@@ -410,7 +381,7 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_penjualan`
 --
 ALTER TABLE `tb_penjualan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `tb_stok_keluar`
@@ -422,7 +393,7 @@ ALTER TABLE `tb_stok_keluar`
 -- AUTO_INCREMENT for table `tb_stok_masuk`
 --
 ALTER TABLE `tb_stok_masuk`
-  MODIFY `id_stok_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id_stok_masuk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `tb_supplier`
@@ -445,6 +416,13 @@ ALTER TABLE `tb_user`
 --
 ALTER TABLE `tb_barang`
   ADD CONSTRAINT `tb_barang_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `tb_kategori` (`id_kategori`);
+
+--
+-- Constraints for table `tb_detail_penjualan`
+--
+ALTER TABLE `tb_detail_penjualan`
+  ADD CONSTRAINT `tb_detail_penjualan_ibfk_1` FOREIGN KEY (`no_penjualan`) REFERENCES `tb_penjualan` (`no_penjualan`),
+  ADD CONSTRAINT `tb_detail_penjualan_ibfk_2` FOREIGN KEY (`nama_barang`) REFERENCES `tb_barang` (`nama_barang`);
 
 --
 -- Constraints for table `tb_stok_keluar`
