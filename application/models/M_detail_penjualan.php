@@ -97,14 +97,27 @@ class M_detail_penjualan extends CI_Model
 		$query = $this->db->get();
 		return $query->result();
 	}
-	public function sum_keuntungan_b()
+	// public function sum_keuntungan_b()
+	// {
+	// 	$this->db->select('tanggal_penjualan, SUM((tb_detail_penjualan.harga_jual-harga_beli)*(jumlah_barang)) as total_keuntungan');
+	// 	$this->db->from('tb_barang');
+	// 	$this->db->join('tb_stok_masuk', 'tb_stok_masuk.id_barang = tb_barang.id_barang');
+	// 	$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.nama_barang = tb_barang.nama_barang');
+	// 	$this->db->join('tb_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
+	// 	$this->db->group_by('tanggal_penjualan');
+
+	// 	$query = $this->db->get();
+	// 	return $query->result();
+	// }
+	public function sum_keuntungan_b($tahun)
 	{
-		$this->db->select('tanggal_penjualan, SUM((tb_detail_penjualan.harga_jual-harga_beli)*(jumlah_barang)) as total_keuntungan');
+		$this->db->select('date_format(str_to_date(tanggal_penjualan, "%d/%m/%Y"), "%m/%Y") AS tanggal_penjualan, SUM((tb_detail_penjualan.harga_jual-harga_beli)*(jumlah_barang)) as total_keuntungan');
 		$this->db->from('tb_barang');
 		$this->db->join('tb_stok_masuk', 'tb_stok_masuk.id_barang = tb_barang.id_barang');
 		$this->db->join('tb_detail_penjualan', 'tb_detail_penjualan.nama_barang = tb_barang.nama_barang');
 		$this->db->join('tb_penjualan', 'tb_detail_penjualan.no_penjualan = tb_penjualan.no_penjualan');
-		$this->db->group_by('tanggal_penjualan');
+		$this->db->group_by('date_format(str_to_date(tanggal_penjualan, "%d/%m/%Y"), "%m/%Y")');
+		$this->db->having('tanggal_penjualan LIKE "%' . $tahun . '"');
 
 		$query = $this->db->get();
 		return $query->result();

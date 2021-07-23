@@ -25,9 +25,17 @@
 			<!-- BAR CHART -->
 			<div class="card card-primary">
 				<div class="card-header">
-					<h3 class="card-title">Total Keuntungan per Tanggal</h3>
+					<h3 class="card-title">Total Keuntungan per Bulan/Tahun</h3>
 				</div>
+
 				<div class="card-body">
+					<div class="form-group">
+						<label>Filter by :</label>
+						<select class="form-control" style="width: 25%;" id="tahun" name="tahun">
+							<option>2021</option>
+							<option>2020</option>
+						</select>
+					</div>
 					<div class="chart">
 						<canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
 					</div>

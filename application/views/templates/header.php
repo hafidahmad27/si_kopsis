@@ -23,7 +23,7 @@
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/dist/css/adminlte.min.css">
 </head>
 
-<body class="hold-transition sidebar-mini layout-fixed">
+<body class="hold-transition sidebar-mini layout-fixed" onload="grafik()">
 	<div class="wrapper">
 
 		<!-- Navbar -->

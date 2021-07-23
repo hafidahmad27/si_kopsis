@@ -145,15 +145,7 @@
 	}
 </script> -->
 <script>
-	$(function() {
-		/* ChartJS
-		 * -------
-		 * Here we will create a few charts using ChartJS
-		 */
-
-		//-------------
-		//- BAR CHART -
-		//-------------
+	function grafik(total_keuntungan) {
 		var barChartCanvas = $('#barChart').get(0).getContext('2d')
 		var barChartData = {
 			labels: [
@@ -164,7 +156,7 @@
 			],
 			datasets: [{
 				label: [
-					'Total Keuntungan per Tanggal'
+					'Total Keuntungan per Bulan/Tahun'
 
 				],
 				backgroundColor: 'rgba(210, 214, 222, 1)',
@@ -193,6 +185,123 @@
 			type: 'bar',
 			data: barChartData,
 			options: barChartOptions
+		})
+
+	}
+	$(function() {
+		/* ChartJS
+		 * -------
+		 * Here we will create a few charts using ChartJS
+		 */
+
+		//-------------
+		//- BAR CHART -
+		//-------------
+		// var barChartCanvas = $('#barChart').get(0).getContext('2d')
+		// var barChartData = {
+		// 	labels: [
+		// 		
+		// 	],
+		// 	datasets: [{
+		// 		label: [
+		// 			'Total Keuntungan per Bulan/Tahun'
+
+		// 		],
+		// 		backgroundColor: 'rgba(210, 214, 222, 1)',
+		// 		borderColor: 'rgba(210, 214, 222, 1)',
+		// 		pointRadius: false,
+		// 		pointColor: 'rgba(210, 214, 222, 1)',
+		// 		pointStrokeColor: '#c1c7d1',
+		// 		pointHighlightFill: '#fff',
+		// 		pointHighlightStroke: 'rgba(220,220,220,1)',
+		// 		data: [
+		// 			
+		// 		]
+		// 	}, ]
+		// }
+
+		// var barChartOptions = {
+		// 	responsive: true,
+		// 	maintainAspectRatio: false,
+		// 	datasetFill: false
+		// }
+
+		// var barChart = new Chart(barChartCanvas, {
+		// 	type: 'bar',
+		// 	data: barChartData,
+		// 	options: barChartOptions
+		// })
+
+		function grafik(total_keuntungan) {
+			var tanggal_p = [];
+			var tot = [];
+			console.log(total_keuntungan);
+			if (total_keuntungan == null) {
+				tanggal_p = [
+					<?php
+					foreach ($total_keuntungan_per_tgl as $terjual) : ?>
+						<?= "'" . $terjual->tanggal_penjualan . "',"; ?>
+					<?php endforeach; ?>
+				]
+				tot = [
+					<?php
+					foreach ($total_keuntungan_per_tgl as $terjual) : ?>
+						<?= "'" . $terjual->total_keuntungan . "',"; ?>
+					<?php endforeach; ?>
+				]
+			} else {
+
+			}
+			for (let i = 0; i < total_keuntungan.length; i++) {
+				tanggal_p[i] = total_keuntungan[i]['tanggal_penjualan'];
+				tot[i] = total_keuntungan[i]['total_keuntungan'];
+			}
+			console.log(tanggal_p);
+			var barChartCanvas = $('#barChart').get(0).getContext('2d')
+			var barChartData = {
+				labels: tanggal_p,
+				datasets: [{
+					label: [
+						'Total Keuntungan per Bulan/Tahun'
+
+					],
+					backgroundColor: 'rgba(210, 214, 222, 1)',
+					borderColor: 'rgba(210, 214, 222, 1)',
+					pointRadius: false,
+					pointColor: 'rgba(210, 214, 222, 1)',
+					pointStrokeColor: '#c1c7d1',
+					pointHighlightFill: '#fff',
+					pointHighlightStroke: 'rgba(220,220,220,1)',
+					data: tot
+				}, ]
+			}
+
+			var barChartOptions = {
+				responsive: true,
+				maintainAspectRatio: false,
+				datasetFill: false
+			}
+
+			var barChart = new Chart(barChartCanvas, {
+				type: 'bar',
+				data: barChartData,
+				options: barChartOptions
+			})
+
+		}
+
+		$("#tahun").change(function() {
+
+			var thn = $(this).children('option:selected').val();
+			console.log(thn);
+			$.post('http://localhost/si_kopsis/dashboard/ambilId', {
+				tahun: thn
+			}, function(e) {
+				console.log(e);
+				var data = JSON.parse(e);
+				grafik(data);
+				// location.reload()
+			});
 		})
 
 		//-------------
@@ -229,7 +338,7 @@
 			options: pieOptions
 		})
 	})
-	console.log('ok');
+	// console.log('ok');
 </script>
 </body>
 
