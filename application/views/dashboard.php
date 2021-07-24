@@ -28,7 +28,7 @@
 					<h3 class="card-title">Total Keuntungan per Bulan/Tahun</h3>
 				</div>
 
-				<div class="card-body">
+				<!-- <div class="card-body">
 					<div class="form-group">
 						<label>Filter by :</label>
 						<select class="form-control" style="width: 25%;" id="tahun" name="tahun">
@@ -39,8 +39,27 @@
 					<div class="chart">
 						<canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
 					</div>
+				</div> -->
+				<div class="card-body">
+					<div class="form-group">
+						<label>Date range:</label>
+						<form action="<?= base_url() ?>/dashboard" method="post">
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										<i class="far fa-calendar-alt"></i>
+									</span>
+								</div>
+								<input type="text" name="tanggal" class="form-control float-right" id="reservation">
+								<button type="submit" class="btn btn-primary">Filter</button>
+							</div>
+						</form>
+						<!-- /.input group -->
+					</div>
+					<div class="chart">
+						<canvas id="barChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+					</div>
 				</div>
-				<!-- /.card-body -->
 			</div>
 
 			<!-- PIE CHART -->
@@ -53,7 +72,6 @@
 				</div>
 				<!-- /.card-body -->
 			</div>
-
 		</div><!-- /.container-fluid -->
 	</section>
 	<!-- /.content -->

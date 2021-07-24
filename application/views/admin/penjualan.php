@@ -38,7 +38,7 @@
 											</div>
 											<div class="form-group col-2">
 												<label>Tanggal</label>
-												<input type="text" name="tanggal_penjualan" value="<?= date('d/m/Y') ?>" readonly class="form-control">
+												<input type="text" name="tanggal_penjualan" value="<?= date('Y/m/d') ?>" readonly class="form-control">
 											</div>
 											<div class="form-group col-2">
 												<label>Jam</label>

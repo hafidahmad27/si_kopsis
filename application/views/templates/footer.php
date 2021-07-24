@@ -22,6 +22,13 @@
 <script src="<?= base_url(); ?>assets/plugins/chart.js/Chart.min.js"></script>
 <!-- Select2 -->
 <script src="<?= base_url(); ?>assets/plugins/select2/js/select2.full.min.js"></script>
+<!-- InputMask -->
+<script src="<?= base_url(); ?>assets/plugins/moment/moment.min.js"></script>
+<script src="<?= base_url(); ?>assets/plugins/inputmask/jquery.inputmask.min.js"></script>
+<!-- date-range-picker -->
+<script src="<?= base_url(); ?>assets/plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="<?= base_url(); ?>assets/plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
 <!-- DataTables  & Plugins -->
 <script src="<?= base_url(); ?>assets/plugins/datatables/jquery.dataTables.min.js"></script>
 <script src="<?= base_url(); ?>assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
@@ -67,6 +74,10 @@
 			"responsive": true,
 		});
 		$('.select2').select2()
+
+		//Date range picker
+		$('#reservation').daterangepicker()
+
 	});
 </script>
 <script>
@@ -338,7 +349,6 @@
 			options: pieOptions
 		})
 	})
-	// console.log('ok');
 </script>
 </body>
 
