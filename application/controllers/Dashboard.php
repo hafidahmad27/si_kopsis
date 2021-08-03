@@ -18,7 +18,7 @@ class Dashboard extends CI_Controller
 				$tanggal_akhir = date("Y-m-d", strtotime(substr($_POST['tanggal'], 12)));
 			} else {
 				$tanggal_awal = '2021/01/01';
-				$tanggal_akhir = '2021/07/24';
+				$tanggal_akhir = '2021/07/31';
 			}
 			$data['barang_terjual_a'] = $this->M_detail_penjualan->barang_terjual_a();
 			$data['barang_terjual_b'] = $this->M_detail_penjualan->barang_terjual_b();

@@ -60,7 +60,7 @@
 								<thead>
 									<tr style="text-align: center;">
 										<th style="width: 2%;">No</th>
-										<th style="width: 9%;">Tanggal</th>
+										<th style="width: 10%;">Tanggal</th>
 										<th>Nama Barang</th>
 										<th style="width: 12%;">Harga Beli</th>
 										<th style="width: 12%;">Harga Jual</th>

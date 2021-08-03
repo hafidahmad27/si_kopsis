@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 24, 2021 at 06:04 PM
+-- Generation Time: Aug 03, 2021 at 10:56 AM
 -- Server version: 10.4.19-MariaDB
 -- PHP Version: 7.4.20
 
@@ -41,15 +41,15 @@ CREATE TABLE `tb_barang` (
 --
 
 INSERT INTO `tb_barang` (`id_barang`, `id_kategori`, `kode_barang`, `nama_barang`, `harga_jual`, `stok_barang`) VALUES
-(1, 1, 'BRG0001', 'HVS', 500, 397),
+(1, 1, 'BRG0001', 'HVS', 500, 395),
 (2, 1, 'BRG0002', 'bufallo', 1000, 355),
 (3, 1, 'BRG0003', 'folio bergaris', 0, 0),
 (4, 1, 'BRG0004', 'mika', 0, 0),
 (5, 2, 'BRG0005', 'amplop sedang', 0, 0),
 (6, 2, 'BRG0006', 'amplop besar', 0, 0),
-(7, 3, 'BRG0007', 'CD-R', 3500, 71),
+(7, 3, 'BRG0007', 'CD-R', 3500, 63),
 (8, 3, 'BRG0008', 'DVD-RW', 5500, 63),
-(9, 3, 'BRG0009', 'CD-RW', 5000, 80),
+(9, 3, 'BRG0009', 'CD-RW', 5000, 75),
 (10, 4, 'BRG0010', 'stofmap', 0, 0),
 (11, 4, 'BRG0011', 'clear holder (mika)', 0, 0),
 (12, 4, 'BRG0012', 'map spring', 0, 0),
@@ -63,7 +63,7 @@ INSERT INTO `tb_barang` (`id_barang`, `id_kategori`, `kode_barang`, `nama_barang
 (20, 5, 'BRG0020', 'stapler kecil', 0, 0),
 (21, 5, 'BRG0021', 'stapler besar', 0, 0),
 (22, 5, 'BRG0022', 'stabillo boss', 0, 0),
-(23, 5, 'BRG0023', 'bed', 1000, 80),
+(23, 5, 'BRG0023', 'bed', 1000, 79),
 (24, 5, 'BRG0024', 'topi', 0, 0),
 (25, 5, 'BRG0025', 'dasi', 0, 0),
 (26, 5, 'BRG0026', 'sabuk', 0, 0),
@@ -117,7 +117,12 @@ INSERT INTO `tb_detail_penjualan` (`no_penjualan`, `nama_barang`, `harga_jual`, 
 ('TR1627141780', 'bed', '1000', 3, '3000'),
 ('TR1627142069', 'DVD-RW', '5500', 4, '22000'),
 ('TR1627142233', 'CD-R', '3500', 3, '10500'),
-('TR1627142233', 'bufallo', '1000', 4, '4000');
+('TR1627142233', 'bufallo', '1000', 4, '4000'),
+('TR1627251333', 'CD-R', '3500', 3, '10500'),
+('TR1627251333', 'HVS', '500', 2, '1000'),
+('TR1627251333', 'bed', '1000', 1, '1000'),
+('TR1627251570', 'CD-RW', '5000', 5, '25000'),
+('TR1627251570', 'CD-R', '3500', 5, '17500');
 
 -- --------------------------------------------------------
 
@@ -179,7 +184,9 @@ INSERT INTO `tb_penjualan` (`id`, `no_penjualan`, `nama_kasir`, `tanggal_penjual
 (9, 'TR1627141276', 'admin', '2020-01-10', '22:41:16', 17000),
 (10, 'TR1627141780', 'admin', '2020-07-29', '22:49:40', 7000),
 (11, 'TR1627142069', 'admin', '2020-01-10', '22:54:29', 22000),
-(12, 'TR1627142233', 'admin', '2020-07-29', '22:57:13', 14500);
+(12, 'TR1627142233', 'admin', '2020-07-29', '22:57:13', 14500),
+(13, 'TR1627251333', 'admin', '2021-07-25', '05:15:33', 12500),
+(14, 'TR1627251570', 'admin', '2021-07-26', '05:19:30', 42500);
 
 -- --------------------------------------------------------
 
@@ -398,7 +405,7 @@ ALTER TABLE `tb_kategori`
 -- AUTO_INCREMENT for table `tb_penjualan`
 --
 ALTER TABLE `tb_penjualan`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `tb_stok_keluar`
